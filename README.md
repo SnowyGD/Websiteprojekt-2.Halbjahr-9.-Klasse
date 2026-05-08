@@ -8,3 +8,6 @@ Projektarbeit: 8.5.26 - 19.6.26
 
 Thema: Gartencenter
 
+Arbeitsprotokoll:
+
+8.5.26: Planen, Thema auswählen, Github vorbereiten
