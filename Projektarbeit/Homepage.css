@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(31, 170, 31);
+    font-family: "TitelFont";
+    font-size: 70px;
+}
+
+@font-face {
+    font-family: "TitelFont";
+    src: url(fonts/ChopinScript.ttf);
+}   
+
+#Oben {
+    background-color: chartreuse;
+    
+}
