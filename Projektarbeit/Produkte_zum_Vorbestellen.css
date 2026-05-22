@@ -1,0 +1,16 @@
+.body{
+    background-color: aquamarine;
+} 
+
+.main_container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+    
+.Pflanzen {
+    max-height:160px;
+    max-width: 480px;
+    align-items: right;
+    align-self: right;
+}
