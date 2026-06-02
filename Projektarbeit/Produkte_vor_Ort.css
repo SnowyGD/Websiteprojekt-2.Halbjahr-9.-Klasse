@@ -1,5 +1,11 @@
+:root {
+    --font-color: white;
+}
+
+
 body {
-    background-color:aquamarine;
+    background-color: #0b3d2e;
+    color: var(--font-color);
 }
 
 .Blumen {
@@ -35,10 +41,6 @@ body {
     overflow-x: auto;
 }
 
-.carousel::-webkit-scrollbar { /* Versteckt Scrollbar */
-    display: none;
-}
-
 .carousel_group {
     display: flex;
     align-items: center;
@@ -46,6 +48,10 @@ body {
     gap: 1em;
     animation: drehen 5s infinite linear;
     padding: 1em;
+}
+
+.carousel::-webkit-scrollbar { /* Versteckt Scrollbar */
+    display: none;
 }
 
 .pflanzedisplay {
@@ -67,13 +73,13 @@ body {
 .etherotext {
     font-family: Ethero;
     font-size: 1.2em;
-    color: #333;
+    color: var(--font-color);
 }
 
 .devinatext {
     font-family: DevinaGarden;
     font-size: 1.2em;
-    color: #333;
+    color: var(--font-color);
 }
 
 @keyframes drehen {
