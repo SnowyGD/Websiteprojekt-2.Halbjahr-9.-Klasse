@@ -13,9 +13,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 8px;
 }
 
-.Blumen img {
+.Blumen img {    
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -27,7 +28,6 @@ body {
     gap: 10px;
     align-items: flex-start;
     flex-direction: row;
-    border: 1px solid red;
     flex-wrap: wrap;
 }
 
@@ -39,6 +39,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 10px;
     background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
 }
 
 .product-card .devinatext,
@@ -51,14 +52,15 @@ body {
     width: 90%;
     display: flex;
     overflow-x: auto;
+    margin-left: auto;
 }
 
 .carousel_group {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
-    animation: drehen 5s infinite linear;
+    gap: 20px;
+    animation: drehen 8s infinite linear;
     padding: 1em;
 }
 
@@ -69,10 +71,10 @@ body {
 .pflanzedisplay {
     flex: 1 1 140px;
     min-width: 120px;
-    border-radius: .2em;
-    text-align: center;
+    border-radius: 8px;
     overflow: hidden;
     background: transparent;
+    object-fit: cover;
 }
 
 .pflanzedisplay img {
@@ -83,7 +85,7 @@ body {
 }
 
 .etherotext {
-    font-family: Ethero;
+    font-family: Ethero;    
     font-size: 1.2em;
     color: var(--font-color);
 }
