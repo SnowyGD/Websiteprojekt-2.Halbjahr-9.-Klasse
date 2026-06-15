@@ -5,6 +5,49 @@
 body {
     background-color: #0b3d2e;
     color: var(--font-color);
+    margin-left: 200px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0; /* left: 0 places it at the left edge of the screen */
+    top: 0; /* top: 0 places it at the top */
+    width: 180px;
+    height: 100vh; /* height: 100vh makes it full screen height */
+    overflow-y: auto; /* Wenn es zu groß ist wird ein Scrollbalken angezeigt */
+    background-color: rgba(11, 61, 46, 0.95);
+    border-right: 2px solid rgba(255, 255, 255, 0.2); 
+    padding: 20px 0; /* Padding adds space inside the sidebar */
+    z-index: 100; /* Stellt sicher, dass die Sidebar über anderen Inhalten liegt */
+}
+
+.sidebar-title {
+    /* Title styling for "Kategorien" */
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #d3e3d5;
+}
+
+.category-button {
+    display: block;
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: var(--font-color);
+    padding: 12px 15px; /* padding adds space inside the button */
+    margin: 5px 0; /* margin creates space between buttons */
+    margin-left: 10px;
+    border-radius: 0 8px 8px 0; /* border-radius runde Ecken */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease; /* transition: effect */
+    border-left: 3px solid transparent; /* border-left creates a colored left border */
+}
+
+.category-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+    border-left-color: #7fd3c7;
 }
 
 .Blumen {
@@ -40,11 +83,32 @@ body {
     padding: 10px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
+    min-width: 220px;
+    max-width: 260px;
 }
 
 .product-card .devinatext,
 .product-card h1 {
     text-align: center;
+}
+
+.product-card .product-info {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.product-card .categories {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #d3e3d5;
+}
+
+.category-heading {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 2em;
+    letter-spacing: 0.06em;
 }
 
 .carousel {
@@ -60,7 +124,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    animation: drehen 8s infinite linear;
+    animation: drehen 20s infinite linear;
     padding: 1em;
 }
 
