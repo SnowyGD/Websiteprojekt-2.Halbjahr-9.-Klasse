@@ -1,24 +1,102 @@
-h1 {
-    color: rgb(31, 170, 31);
-    font-family: "TitelFont";
-    font-size: 70px;
-}
-
 @font-face {
     font-family: "TitelFont";
     src: url(fonts/ChopinScript.ttf);
-}   
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.haupt-inhalt {
+    width: 800px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.rand-bereich {
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rand-links {
+    background-image: url("");
+    background-position: right center;
+}
+
+.rand-rechts {
+    background-image: url("");
+    background-position: left center;
+}
 
 #Oben {
     background-color: chartreuse;
-    
+    text-align: center;
 }
-#Mitte{
+
+#Mitte {
     color: rgb(31, 170, 31);
-font-family: "New Times Roman";
-font-size: 25px;
+    font-family: "Times New Roman";
+    font-size: 25px;
+    text-align: center;
 }
-a{
-    color: green;
-    font-size: 30px;
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.mein-button {
+    padding: 10px 20px;
+    background-color: #1e4620;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: background-color 0.3s;
+}
+
+.mein-button:hover {
+    background-color: #218838;
+}
+
+.bild-scroll-container {
+    overflow: hidden;
+    padding: 10px 0 20px;
+}
+
+.bild-scroll-track {
+    display: flex;
+    animation: scroll-bilder 24s linear infinite;
+}
+
+.bild-scroll {
+    display: flex;
+    gap: 10px;
+}
+
+.bild-scroll img {
+    flex: 0 0 auto;
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1e4620;
+}
+
+@keyframes scroll-bilder {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
