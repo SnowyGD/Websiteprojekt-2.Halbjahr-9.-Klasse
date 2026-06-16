@@ -1,97 +1,152 @@
+/* Schriftart für den Titelbereich: hier kann ein spezielles Script-Font geladen werden. */
 @font-face {
     font-family: "TitelFont";
     src: url(fonts/ChopinScript.ttf);
 }
 
+/* Globale Farbeinstellungen und Standardschriftart für die gesamte Seite. */
+:root {
+    color-scheme: light;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #1f3d2d;
+    background-color: #e8f5ea;
+}
+
+/* Der Body zentriert den Inhalt und setzt einen Hintergrundverlauf. */
 body {
-    display: flex;
     margin: 0;
-    padding: 0;
     min-height: 100vh;
-}
-
-.haupt-inhalt {
-    width: 800px;
-    background-color: #ffffff;
-    flex-shrink: 0;
-    margin: 0 auto;
-}
-
-.rand-bereich {
-    flex-grow: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.rand-links {
-    background-image: url("");
-    background-position: right center;
-}
-
-.rand-rechts {
-    background-image: url("");
-    background-position: left center;
-}
-
-#Oben {
-    background-color: chartreuse;
-    text-align: center;
-}
-
-#Mitte {
-    color: rgb(31, 170, 31);
-    font-family: "Times New Roman";
-    font-size: 25px;
-    text-align: center;
-}
-
-.button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-bottom: 15px;
+    padding: 30px 16px;
+    background: radial-gradient(circle at top left, #f5fff4 0%, #d3f4d9 36%, #d8f2e1 100%);
 }
 
-.mein-button {
-    padding: 10px 20px;
-    background-color: #1e4620;
+/* Hauptcontainer für die Website-Inhalte. */
+.haupt-inhalt {
+    position: relative;
+    width: min(920px, 100%);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(54, 115, 62, 0.13);
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgba(42, 93, 58, 0.14);
+    overflow: hidden;
+    padding: 28px;
+}
+
+/* Der obere Bereich mit Titel und kurzer Beschreibung. */
+#Oben {
+    background: linear-gradient(135deg, #4d8f3f, #3a6d2f);
     color: white;
+    padding: 32px 22px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+/* Überschrift im Headerbereich: große, ansprechende Typografie. */
+#Oben h1 {
+    margin: 0;
+    font-family: "TitelFont", "Segoe UI", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.02em;
+}
+
+/* Untertitel zeigt den Kern der Marke / Dienstleistung. */
+.kleiner-text {
+    margin: 12px auto 0;
+    max-width: 760px;
+    font-size: 1rem;
+    opacity: 0.89;
+}
+
+/* Beschreibender Textblock unter dem Header. */
+#Mitte {
+    color: #25512c;
+    font-size: 1.06rem;
+    line-height: 1.75;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 22px;
+    background: rgba(246, 253, 247, 0.92);
+    border: 1px solid rgba(113, 176, 104, 0.18);
+    margin-bottom: 28px;
+}
+
+/* Abstand zwischen den einzelnen Textabsätzen. */
+#Mitte p {
+    margin: 14px;
+}
+
+/* Die Buttons werden als Gitter angeordnet. */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+/* Stil für die Link-Buttons: Farbe, Größe, Schatten und Hover-Effekt. */
+.mein-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
+    padding: 0 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #3c7d45, #2f5c30);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: sans-serif;
-    transition: background-color 0.3s;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: 0 12px 22px rgba(41, 75, 44, 0.18);
 }
 
+/* Hover- und Fokus-Effekt für bessere Benutzerführung. */
 .mein-button:hover {
-    background-color: #218838;
+    background: linear-gradient(135deg, #5ea961, #3f7c45);
+    transform: translateY(-1px);
+    box-shadow: 0 16px 28px rgba(39, 79, 44, 0.2);
 }
 
+/* Container für den scrollenden Bildbereich. */
 .bild-scroll-container {
     overflow: hidden;
-    padding: 10px 0 20px;
+    padding: 20px 0 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(129, 188, 119, 0.18);
 }
 
+/* Track für die Animation der Bilder. */
 .bild-scroll-track {
     display: flex;
-    animation: scroll-bilder 24s linear infinite;
+    animation: scroll-bilder 20s linear infinite;
+    gap: 18px;
+    padding: 10px 18px;
 }
 
+/* Gruppe von Bildern, die nebeneinander angezeigt werden. */
 .bild-scroll {
     display: flex;
-    gap: 10px;
+    gap: 18px;
 }
 
+/* Bildstil: gleiche Größe, abgerundete Ecken und Schatten. */
 .bild-scroll img {
     flex: 0 0 auto;
-    width: 220px;
-    height: 140px;
+    width: 240px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #1e4620;
+    border-radius: 18px;
+    border: 2px solid rgba(52, 100, 52, 0.14);
+    box-shadow: 0 12px 24px rgba(47, 84, 45, 0.12);
 }
 
+/* Animation, die den Bild-Track von links nach rechts verschiebt. */
 @keyframes scroll-bilder {
     from {
         transform: translateX(0);
@@ -100,3 +155,4 @@ body {
         transform: translateX(-50%);
     }
 }
+
