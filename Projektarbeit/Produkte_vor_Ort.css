@@ -8,6 +8,11 @@ body {
     margin-left: 200px;
 }
 
+body::-webkit-scrollbar { /* Versteckt Scrollbar */
+    display: none;
+}
+
+
 .sidebar {
     position: fixed;
     left: 0; /* left: 0 places it at the left edge of the screen */
@@ -107,8 +112,8 @@ body {
 .category-heading {
     width: 100%;
     margin-top: 40px;
-    font-size: 2em;
-    letter-spacing: 0.06em;
+    font-size: 50px;
+    letter-spacing: 2px;
 }
 
 .carousel {
@@ -158,6 +163,15 @@ body {
     font-family: DevinaGarden;
     font-size: 1.2em;
     color: var(--font-color);
+}
+
+.btn {
+    border-radius: 8px;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 0px;
+    height: 40px;
 }
 
 @keyframes drehen {
