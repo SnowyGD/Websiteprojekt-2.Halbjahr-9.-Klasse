@@ -1,64 +1,185 @@
+:root {
+    --font-color: white;
+}
+
 body {
     background-color: #0b3d2e;
-    color: white;
-} 
+    color: var(--font-color);
+    margin-left: 200px;
+}
 
-h1 {
+body::-webkit-scrollbar { /* Versteckt Scrollbar */
+    display: none;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0; /* left: 0 places it at the left edge of the screen */
+    top: 0; /* top: 0 places it at the top */
+    width: 180px;
+    height: 100vh; /* height: 100vh makes it full screen height */
+    overflow-y: auto; /* Wenn es zu groß ist wird ein Scrollbalken angezeigt */
+    background-color: rgba(11, 61, 46, 0.95);
+    border-right: 2px solid rgba(255, 255, 255, 0.2); 
+    padding: 20px 0; /* Padding adds space inside the sidebar */
+    z-index: 100; /* Stellt sicher, dass die Sidebar über anderen Inhalten liegt */
+}
+
+.sidebar-title {
+    /* Title styling for "Kategorien" */
     text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #d3e3d5;
 }
 
-body::-webkit-scrollbar {
-    background-color: transparent;
-    color:black;
+.category-button {
+    display: block;
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: var(--font-color);
+    padding: 12px 15px; /* padding adds space inside the button */
+    margin: 5px 0; /* margin creates space between buttons */
+    margin-left: 10px;
+    border-radius: 0 8px 8px 0; /* border-radius runde Ecken */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease; /* transition: effect */
+    border-left: 3px solid transparent; /* border-left creates a colored left border */
 }
 
-.main_container {
-    padding: 20px;
+.category-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+    border-left-color: #7fd3c7;
 }
 
-.category-heading {
-    font-size: 28px;
-    margin: 32px 0 12px;
-    width: 100%;
-}
-
-.plants {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.plant {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 220px;
-    min-height: 270px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.06);
-    padding: 12px;
+.Blumen {
+    width: 200px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 8px;
 }
 
-.plant h2 {
-    margin: 8px 0 4px 0;
-    font-size: 18px;
-}
-
-.plant p {
-    margin: 2px 0;
-    font-size: 14px;
-}
-
-.Pflanzen {
+.Blumen img {    
     width: 100%;
-    min-height: 160px;
-    height: auto;
-    max-height: 160px;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    min-width: 220px;
+    max-width: 260px;
+}
+
+.product-card .devinatext,
+.product-card h1 {
+    text-align: center;
+}
+
+.product-card .product-info {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.product-card .categories {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #d3e3d5;
+}
+
+.category-heading {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.carousel {
+    margin: 100px;
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+    margin-left: auto;
+}
+
+.carousel_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: drehen 20s infinite linear;
+    padding: 1em;
+}
+
+.carousel::-webkit-scrollbar { /* Versteckt Scrollbar */
+    display: none;
+}
+
+.pflanzedisplay {
+    flex: 1 1 140px;
+    min-width: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: transparent;
     object-fit: cover;
-    border-radius: 6px;
+}
+
+.pflanzedisplay img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.etherotext {
+    font-family: Ethero;    
+    font-size: 1.2em;
+    color: var(--font-color);
+}
+
+.devinatext {
+    font-family: DevinaGarden;
+    font-size: 1.2em;
+    color: var(--font-color);
+}
+
+.btn {
+    border-radius: 8px;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 0px;
+    height: 40px;
+}
+
+@keyframes drehen {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+@font-face {
+    font-family: Ethero;
+    src: url("fonts/Ethero.otf");
 }

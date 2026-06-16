@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px 16px;
-    background: radial-gradient(circle at top left, #f5fff4 0%, #d3f4d9 36%, #d8f2e1 100%);
+    background: linear-gradient(135deg, #0b3d2e 0%, #1a6641 50%, #0d4a38 100%);
 }
 
 /* Hauptcontainer für die Website-Inhalte. */
