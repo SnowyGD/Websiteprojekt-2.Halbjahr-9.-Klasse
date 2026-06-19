@@ -15,14 +15,14 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
 
 .sidebar {
     position: fixed;
-    left: 0; /* left: 0 places it at the left edge of the screen */
-    top: 0; /* top: 0 places it at the top */
+    left: 0; /* platziert es links */
+    top: 0; /* platziert es oben */
     width: 180px;
-    height: 100vh; /* height: 100vh makes it full screen height */
+    height: 100vh; /* volle Bildschirmhöhe */
     overflow-y: auto; /* Wenn es zu groß ist wird ein Scrollbalken angezeigt */
     background-color: rgba(11, 61, 46, 0.95);
     border-right: 2px solid rgba(255, 255, 255, 0.2); 
-    padding: 20px 0; /* Padding adds space inside the sidebar */
+    padding: 20px 0; /* macht Platz innerhalb der Sidebar */
     z-index: 100; /* Stellt sicher, dass die Sidebar über anderen Inhalten liegt */
 }
 
@@ -40,13 +40,13 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
     display: block;
     text-decoration: none; /* Entfernt die Unterstreichung der Links */
     color: var(--font-color);
-    padding: 12px 15px; /* padding adds space inside the button */
-    margin: 5px 0; /* margin creates space between buttons */
+    padding: 12px 15px; /* platziert den Text innerhalb des Buttons */
+    margin: 5px 0; /* macht Platz zwischen den Buttons */
     margin-left: 10px;
     border-radius: 0 8px 8px 0; /* border-radius runde Ecken */
     background-color: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease; /* transition: effect */
-    border-left: 3px solid transparent; /* border-left creates a colored left border */
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent; /* linke Kante hat Farbe*/
 }
 
 .category-button:hover {
@@ -89,7 +89,7 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     min-width: 220px;
-    max-width: 260px;
+    min-height: 500px;
 }
 
 .product-card .devinatext,
@@ -99,13 +99,13 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
 
 .product-card .product-info {
     margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 1.5em;  /* EM = Eltern-Element Schriftgröße */
     text-align: center;
 }
 
 .product-card .categories {
     margin-top: 8px;
-    font-size: 1em;
+    font-size: 1em; /* EM = Eltern-Element Schriftgröße */
     color: #d3e3d5;
 }
 
@@ -130,7 +130,7 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
     justify-content: center;
     gap: 20px;
     animation: drehen 20s infinite linear;
-    padding: 1em;
+    padding: 1em; /* EM = Eltern-Element Schriftgröße */
 }
 
 .carousel::-webkit-scrollbar { /* Versteckt Scrollbar */
@@ -155,13 +155,7 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
 
 .etherotext {
     font-family: Ethero;    
-    font-size: 1.2em;
-    color: var(--font-color);
-}
-
-.devinatext {
-    font-family: DevinaGarden;
-    font-size: 1.2em;
+    font-size: 1.2em; /* EM = Eltern-Element Schriftgröße */
     color: var(--font-color);
 }
 
@@ -179,7 +173,7 @@ body::-webkit-scrollbar { /* Versteckt Scrollbar */
     to {translate: -100%;}
 }
 
-@font-face {
+@font-face { /*Schriftart Ethero */
     font-family: Ethero;
     src: url("fonts/Ethero.otf");
 }
