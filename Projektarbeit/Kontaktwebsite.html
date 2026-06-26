@@ -4,112 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kontakt</title>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#0b3d2e;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    background:linear-gradient(135deg,#0b3d2e 0%,#1a6641 45%,#0e4b33 100%);
     color:white;
-    padding:20px;
 }
 
 .container{
-    max-width:900px;
-    margin:auto;
-    padding:50px 40px;
+    width:min(900px,100%);
+    padding:40px 32px;
     text-align:center;
-    background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:24px;
+    box-shadow:0 18px 45px rgba(0,0,0,0.16);
+    backdrop-filter:blur(8px);
 }
 
-.nav{
-    margin-bottom:50px;
-}
+.nav{margin-bottom:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
 
 .nav a{
     display:inline-block;
     text-decoration:none;
     background:white;
     color:#0b3d2e;
-    padding:14px 26px;
-    margin:8px;
+    padding:12px 18px;
+    border-radius:999px;
     font-weight:bold;
 }
 
 h1{
     font-family:'Great Vibes', cursive;
-    font-size:90px;
+    font-size:clamp(2.8rem, 6vw, 4.5rem);
     color:#ffd54f;
-    margin-bottom:30px;
+    margin-bottom:22px;
 }
 
-/* gleiche Schrift wie Überschrift */
 .highlight{
     font-family:'Great Vibes', cursive;
     color:#ffd54f;
     font-weight:normal;
-    font-size:32px;
+    font-size:1.7rem;
 }
 
-p{
-    font-size:24px;
-    line-height:1.7;
-    margin-bottom:25px;
-}
+p{font-size:1.1rem;line-height:1.75;margin-bottom:18px;}
 
-@media (max-width:700px){
+strong{display:block;}
 
- 
-}
+.footer-note{margin-top:24px;font-size:0.95rem;color:#e5f7e8;}
 </style>
 </head>
-
 <body>
+    <div class="container">
+        <div class="nav">
+            <a href="Homepage.html">Homepage</a>
+            <a href="Produkte_zum_Vorbestellen.html">Vorbestellen</a>
+            <a href="Produkte_vor_Ort.html">Produkte vor Ort</a>
+        </div>
 
-<div class="container">
+        <h1>Kontakt</h1>
 
-    <div class="nav">
-        <a href="Homepage.html">Homepage</a>
-        <a href="Produkte_zum_Vorbestellen.html">Vorbestellen</a>
-        <a href="Produkte_vor_Ort.html">Produkte vor Ort</a>
+        <p><strong>Möchtest du uns positives Feedback geben oder Kritik äußern? Hast du Fragen zu einem Thema?</strong></p>
+        <p><strong>Möchtest du uns interessante Produkte empfehlen oder einen Gastbeitrag einreichen?</strong></p>
+        <p><strong>Oder möchtest du auf GartencenterGerresheim.biz werben?</strong></p>
+
+        <p>Dann schreibe uns an:<br><span class="highlight">gartencenter.duesseldorf@mail.de</span></p>
+        <p>Oder rufe uns an:<br><span class="highlight">+49 123456789</span></p>
+        <p><strong>Wir melden uns schnellstmöglich bei dir!</strong></p>
+        <p class="footer-note">Gartencenter Gerresheim<br>Copyright: 2026, Gymnasium Gerresheim</p>
     </div>
-
-    <h1>Kontakt</h1>
-
-    <p>
-        <strong>
-            Möchtest du uns positives Feedback geben oder Kritik äußern?
-            Hast du Fragen zu einem Thema?
-            <br><br>
-            Möchtest du uns interessante Produkte empfehlen oder einen Gastbeitrag einreichen?
-            <br><br>
-            Oder möchtest du auf GartencenterGerresheim.biz werben?
-        </strong>
-    </p>
-
-    <p>
-        Dann schreibe uns an:<br>
-        <span class="highlight">gartencenter.duesseldorf@mail.de</span>
-    </p>
-
-    <p>
-        Oder rufe uns an:<br>
-        <span class="highlight">+49 123456789</span>
-    </p>
-
-    <p>
-        <strong>Wir melden uns schnellstmöglich bei dir!</strong>
-    </p>
-    <p>Gartencenter Gerresheim</p>
-    <p>Copyright: 2026, Gymnasium Gerresheim</p>
-</div>
-
 </body>
 </html>

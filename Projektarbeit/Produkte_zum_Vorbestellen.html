@@ -3,21 +3,30 @@
         <link rel="stylesheet" href="Produkte_zum_Vorbestellen.css">
     </head>
     <body>
-        <div class="sidebar">
-            <h3 class="sidebar-title">Kategorien</h3>
-            <a href="#home" class="category-button">Home</a>
-            <a href="#obstbäume" class="category-button">Obstbäume</a>
-            <a href="#andere-bäume" class="category-button">Andere Bäume</a>
-            <a href="#kräuter" class="category-button">Kräuter & Sträucher</a>
-            <a href="#pilze" class="category-button">Pilze</a>
-        </div>
-        <h2 class="category-heading" id="home"></h2>
-        <h1 class="etherotext" style="font-size: 5em;">Produkte zum Vorbestellen</h1>
-        <button class = "btn" style = "font-size:20px" onclick="window.location.href='Homepage.html'">Zurück zur Startseite</button>
-        <button class = "btn" style="font-size:20px" onclick="window.location.href='Produkte_vor_Ort.html'">Produkte vor Ort</button>
-        <button class = "btn" style="font-size:20px" onclick="window.location.href='Kontaktwebsite.html'">Kontakt</button>
+        <div class="page-shell">
+            <div class="sidebar">
+                <h3 class="sidebar-title">Kategorien</h3>
+                <a href="#home" class="category-button">Home</a>
+                <a href="#obstbäume" class="category-button">Obstbäume</a>
+                <a href="#andere-bäume" class="category-button">Andere Bäume</a>
+                <a href="#kräuter" class="category-button">Kräuter & Sträucher</a>
+                <a href="#pilze" class="category-button">Pilze</a>
+            </div>
 
-        <div class="carousel">
+            <main class="main-content">
+                <header class="page-header">
+                    <p class="eyebrow">Jetzt reservieren</p>
+                    <h1 class="page-title">Produkte zum Vorbestellen</h1>
+                    <p class="page-description">Entdecken Sie unsere Auswahl an Obstbäumen, Kräutern und Pilzen und sichern Sie sich Ihre Favoriten frühzeitig.</p>
+                    <div class="nav-actions">
+                        <a class="btn" href="Homepage.html">Zurück zur Startseite</a>
+                        <a class="btn" href="Produkte_vor_Ort.html">Produkte vor Ort</a>
+                        <a class="btn" href="Kontaktwebsite.html">Kontakt</a>
+                    </div>
+                </header>
+
+                <section class="carousel-section">
+                    <div class="carousel">
             <div class="carousel_group">
                 <!-- Lavendel--><div class="pflanzedisplay"><img src="https://images.unsplash.com/photo-1565011523534-747a8601f10a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhdmVuZGVsfGVufDB8fDB8fHww"></div>
                 <!-- Rosmarin--><div class="pflanzedisplay"><img src="https://images.unsplash.com/photo-1582745741856-1a5d68158ba3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cm9zbWFyaW58ZW58MHx8MHx8fDA%3D"></div>
@@ -388,7 +397,11 @@
             </div>
         </div>
 
-        <p>Gartencenter Gerresheim</p>
-        <p>Copyright: 2026, Gymnasium Gerresheim</p>
+        <footer class="site-footer">
+            <p>Gartencenter Gerresheim</p>
+            <p>Copyright: 2026, Gymnasium Gerresheim</p>
+        </footer>
+            </main>
+        </div>
     </body>
 </html>
